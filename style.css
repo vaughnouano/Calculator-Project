@@ -1,0 +1,366 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ==============================
+
+
+
+========================== */
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: rgba(62, 60, 58, 1);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  position: relative;
+  background-color: rgba(53, 53, 53, 1);
+  box-shadow: 4px 4px 8px rgba(46, 46, 46, 1);
+  padding: 0.438rem;
+  border-radius: 6px;
+}
+
+.screen {
+  height: 120px;
+}
+
+#hide {
+  display: block;
+  color: rgb(0, 197, 134);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 288px;
+  height: 111px;
+}
+
+.center {
+  width: 100%;
+}
+
+.led-display {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.5rem;
+  text-align: end;
+  padding: 0.938rem 1.188rem;
+  margin-inline: auto;
+  background-color: rgba(18, 18, 18, 1);
+  border-radius: 5px;
+  max-width: 200px;
+  height: 24px;
+  overflow-x: hidden;
+}
+
+#numbers {
+  color: rgb(0, 197, 134);
+  text-shadow: 0 0 10px rgb(0, 197, 134);
+}
+
+.led-display::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 111px;
+  background-color: rgba(56, 56, 56, 0.77);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px 5px 0 0;
+  border: 1px solid rgba(44, 44, 44, 1);
+}
+
+.buttons {
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: repeat(4, auto);
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 1rem;
+
+  grid-template-areas:
+    ". . . ."
+    "seven eight nine plus"
+    "four five six plus"
+    "one two three enter"
+    "zero zero dot enter";
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 238, 212, 1);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.71);
+  border-radius: 2px;
+  width: 69px;
+  height: 69px;
+
+  cursor: pointer;
+}
+
+.button:active {
+  box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.82);
+}
+
+.yellow {
+  background-color: rgba(255, 163, 24, 1);
+}
+
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+.nine {
+  grid-area: nine;
+}
+.zero {
+  grid-area: zero;
+  width: 100%;
+}
+.dot {
+  grid-area: dot;
+}
+.plus {
+  grid-area: plus;
+  height: 100%;
+}
+.enter {
+  grid-area: enter;
+  height: 100%;
+}
+
+/* ===================
+    under development
+   =================== */
+.screws-top {
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  top: 0;
+  left: 0;
+  margin: 0.563rem;
+  position: absolute;
+  background-color: rgba(32, 32, 32, 1);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 99;
+}
+
+.screws-top-right {
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  top: 0;
+  right: 0;
+  margin: 0.563rem;
+  position: absolute;
+  background-color: rgba(32, 32, 32, 1);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 99;
+}
+
+.screws-bottom {
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  bottom: 0;
+  left: 0;
+  margin: 0.563rem;
+  position: absolute;
+  background-color: rgba(32, 32, 32, 1);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 99;
+}
+
+.screws-bottom-right {
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  bottom: 0;
+  right: 0;
+  margin: 0.563rem;
+  position: absolute;
+  background-color: rgba(32, 32, 32, 1);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 99;
+}
+
+/* paragraph */
+/* .paragraph {
+  font-family: "Source Code Pro", monospace;
+  color: hsla(0, 0%, 100%, 1);
+  margin-inline: 51px;
+}
+
+.paragraph h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  max-width: 392px;
+  margin-bottom: 21px;
+}
+
+.paragraph p {
+  font-size: 0.875rem;
+  margin-bottom: 21px;
+  max-width: 409px;
+} */
